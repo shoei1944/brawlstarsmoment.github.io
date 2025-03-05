@@ -1,0 +1,230 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    background-image: linear-gradient(to bottom, #87CEEB, #4682B4);
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: #ccc;
+}
+
+.welcome {
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.help-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #444;
+}
+
+.btn:active {
+    background-color: #555;
+}
+
+.products, .trash, .news, .reviews, .about, .buy-item, .buy-desc, .buy-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.news, .reviews, .about {
+    margin: 50px;
+}
+
+.product-card .price-title, .trash-card .price-title, .review-card, .buy-card, .about {
+    font-size: calc(123.33%);
+}
+
+.trash-card button {
+    margin: 5px;
+}
+
+.product-card, .trash-card, .review-card, .buy-card {
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    /* max-height: 400px;  */
+}
+
+.product-card img, .trash-card img {
+    max-height: 150px; 
+}
+
+.about {
+        margin: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; 
+        /* max-height: 400px; */
+    
+}
+
+.product-card .desc {
+    font-size: calc(80%);
+}
+
+.product-card .title {
+    font-size: calc(80%);
+}
+
+.product-card h3, .trash-card h3, .review-card h3, .buy-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-card p, .trash-card p, .review-card p, .buy-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-card img,.trash-card img,.review-card img, .buy-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.search {
+    padding: 20px;
+    text-align: center;
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#search-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#search-button:hover {
+    background-color: #444;
+}
+
+#search-button:active {
+    background-color: #555;
+}
+
+#search-results {
+    margin-top: 20px;
+}
+
+
+
+#shadowBox {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black w/opacity/see-through */
+    border: 3px solid;
+}
+
+.rainbow {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 32px;
+    font-family: monospace;
+    letter-spacing: 5px;
+}
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
