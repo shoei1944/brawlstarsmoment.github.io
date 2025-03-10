@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brawl Stars Skins</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -28,20 +28,20 @@
         </div>
         <div class="buy-item">
         <div class="buy-card">
-            <img src="{item.icon}" alt="{item.name}">
-            <h3>{item.name}</h3>
-            <p>{item.description}</p>
-            <p class="price-title">{item.price} рублей</p>
-            <p>{types[item.type] || 'Неизвестный тип'}</p>
+            <img src="{item.icon}" alt="Шелли">
+            <h3>Шелли</h3>
+            <p>Скин включает: - особую модель бойца.</p>
+            <p class="price-title">129 рублей</p>
+            <p>Скин</p>
         </div>
     </div>
     <div class="buy-desc">
-    <p>Товар {item.name}, цена {item.price}. Описание: {item.descripiton}; Купить можно по ссылке: {link};</p>
+    <p>Товар Шелли, цена 129. Описание: Скин включает: - особую модель бойца.; Купить можно по ссылке: {link};</p>
     </div>
     <div class="buy-btn">
-        <a href="#"><button class="btn linked" data-product-id="${item.id}">Купить</button></a>
+        <button class="btn" data-product-id="${item.id}" onclick="addToTrash(1)">Купить</button>
     </div>
     </main>
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 </html>

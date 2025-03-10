@@ -1,16 +1,16 @@
 // script.js
 
 const products = [
-    { name: 'Бандитка Шелли', icon: 'http://localhost:5500/img/Shelly-bandita.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 0, style: 'rainbow'},
-    { name: 'Панда Нита', icon: 'http://localhost:5500/img/Nita-panda.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 1},
-    { name: 'ЗомБорк', icon: 'http://localhost:5500/img/Zombrok.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 2},
-    { name: 'ВамПримо', icon: 'http://localhost:5500/img/Vam-prmio.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 3},
-    { name: 'Классический 8-БИТ', icon: 'https://brawlbox.cc/images/8bit-300x226.png.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 4},
-    { name: 'Красный Рико', icon: 'http://localhost:5500/img/Red_riko.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 5},
+    { name: 'Бандитка Шелли', icon: 'http://localhost:8080/img/Shelly-bandita.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 0, style: 'rainbow', goto: 'buy-shelly.html'},
+    { name: 'Панда Нита', icon: 'http://localhost:8080/img/Nita-panda.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 1, goto: 'buy-panda-nito.html'},
+    { name: 'ЗомБорк', icon: 'http://localhost:8080/img/Zombrok.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 2, goto: 'buy-zombrok.html'},
+    { name: 'ВамПримо', icon: 'http://localhost:8080/img/Vam-prmio.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 3, goto: 'buy-vam-primo.html'},
+    { name: 'Классический 8-БИТ', icon: 'https://brawlbox.cc/images/8bit-300x226.png.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 4, goto: 'buy-classic-8-bit.html'},
+    { name: 'Красный Рико', icon: 'http://localhost:8080/img/Red_riko.webp', description: 'Скин включает: - особую модель бойца.', price: 129, type: 'skin', id: 5, goto: 'buy-red-riko.html'},
 
-    { name: '2000 Гемов', icon: 'https://brawlbox.cc/images/2000gemy-300x237.png', description: '', price: 129, type: 'gems', id: 6},
-    { name: '950 Гемов', icon: 'https://brawlbox.cc/images/360gemy-1-300x237.png', description: '', price: 129, type: 'gems', id: 7},
-    { name: '170 Гемов', icon: 'https://brawlbox.cc/images/360gemy-1-300x237.png', description: '', price: 129, type: 'gems', id: 8},
+    { name: '2000 Гемов', icon: 'https://brawlbox.cc/images/2000gemy-300x237.png', description: '', price: 129, type: 'gems', id: 6, goto: 'buy-2000-gems.html'},
+    { name: '950 Гемов', icon: 'https://brawlbox.cc/images/360gemy-1-300x237.png', description: '', price: 129, type: 'gems', id: 7, goto: 'buy-950-gems.html'},
+    { name: '170 Гемов', icon: 'https://brawlbox.cc/images/360gemy-1-300x237.png', description: '', price: 129, type: 'gems', id: 8, goto: 'buy-170-gems.html'},
   ];
 
 const types = {
@@ -35,10 +35,10 @@ try {
     productElement.innerHTML = `
         <img src="${product.icon}" alt="${product.name}">
         <h3 class="title">${product.name}</h3>
-        <!-- <p class="desc">${product.description}</p> -->
         <p>${types[product.type] || 'Неизвестный тип'}</p>
-        <button class="btn btn-buy buy" data-product-id=${product.id}>${product.price}₽</button>
-        <!-- <h3 class="rainbow rainbow_text_animated">COMING SOON</h3> -->
+        <!-- <button class="btn btn-buy buy" data-product-id=${product.id}><a href='/html/buy/${product.goto}'>${product.price}₽</a></button> -->
+        <button class="btn" data-product-id=${product.id}><a href='/html/buy/${product.goto}'>${product.price}₽</a></button>
+
     `;
     try {
     if(product.style == 'rainbow') console.log(`${product.name}`);
@@ -66,10 +66,9 @@ function filterProducts(type) {
       productElement.innerHTML = `
         <img src="${product.icon}" alt="${product.name}">
         <h3 class="title">${product.name}</h3>
-        <!-- <p class="desc">${product.description}</p> -->
         <p>${types[product.type] || 'Неизвестный тип'}</p>
-        <button class="btn btn-buy buy" data-product-id=${product.id}>${product.price}₽</button>
-        
+        <!-- <button class="btn btn-buy buy" data-product-id=${product.id}><a href='/html/buy/${product.goto}'>${product.price}₽</a></button> -->
+        <button class="btn" data-product-id=${product.id}><a href='/html/buy/${product.goto}'>${product.price}₽</a></button>
       `;
       productsList.appendChild(productElement);
     }
