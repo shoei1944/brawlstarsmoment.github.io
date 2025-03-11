@@ -37,7 +37,7 @@ try {
         <h3 class="title">${product.name}</h3>
         <p>${types[product.type] || 'Неизвестный тип'}</p>
         <!-- <button class="btn btn-buy buy" data-product-id=${product.id}><a href='/html/buy/${product.goto}'>${product.price}₽</a></button> -->
-        <button class="btn" data-product-id=${product.id}><a href='html/buy/${product.goto}'>${product.price}₽</a></button>
+        <a href='html/buy/${product.goto}'><button class="btn" data-product-id=${product.id}>${product.price}₽</button></a>
 
     `;
     try {
