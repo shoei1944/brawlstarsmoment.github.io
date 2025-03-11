@@ -13,24 +13,30 @@ body {
 }
 
 header {
-    padding: 10px;
-    text-align: center;
+    padding: 1rem;
+/*     text-align: center; */
     background-color: #333;
     color: #fff;
+    position: relative;
 }
 
 header nav ul {
-    list-style: none; 
+/*     list-style: none; 
     margin: 0;
-    padding: 0;
+    padding: 0; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+/*     justify-content: space-between; */
 }
 
 header nav a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.2s ease;
+/*     transition: color 0.2s ease; */
+    padding: 0.5rem;
+    display: block;
 }
 
 header nav a:hover {
@@ -38,13 +44,16 @@ header nav a:hover {
 }
 
 .welcome {
-    padding: 20px;
+/*     padding: 20px; */
+    padding: 2rem 1rem;
     text-align: center;
 }
 
 .welcome h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+/*     font-size: 36px;
+    margin-bottom: 10px; */
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .welcome p {
@@ -52,15 +61,24 @@ header nav a:hover {
     margin-bottom: 20px;
 }
 
-.help-tools {
+/* .help-tools {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
     margin: 20px 0;
-}
+} */
 
 .btn {
-    background-color: #333;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #333;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    width: auto;
+    margin: 0.5rem;
+    
+/*     background-color: #333;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -69,7 +87,7 @@ header nav a:hover {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    margin-right: 10px;
+    margin-right: 10px; */
 }
 
 .btn:hover {
@@ -84,6 +102,9 @@ header nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    gap: 1rem;
+    padding: 1rem;
 }
 
 .news, .reviews, .about {
@@ -99,7 +120,14 @@ header nav a:hover {
 }
 
 .product-card, .trash-card, .review-card, .buy-card {
-    margin: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: 400px;
+    transition: transform 0.3s ease;
+/*     margin: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
     width: calc(33.33% - 20px);
@@ -110,13 +138,16 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: center; */
 
     /* max-height: 400px;  */
 }
 
 .product-card img, .trash-card img {
-    max-height: 150px; 
+/*     max-height: 150px;  */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .about {
@@ -202,3 +233,85 @@ header nav a:hover {
 }
 
 img:hover {     transform: scale(1.1); }
+
+@media (max-width: 1024px) {
+    .product-card,
+    .trash-card,
+    .review-card {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome h1 {
+        font-size: 1.75rem;
+    }
+    
+    .welcome p {
+        font-size: 1rem;
+    }
+    
+    .product-card,
+    .trash-card,
+    .review-card {
+        flex: 1 1 100%;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome h1 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .news,
+    .reviews,
+    .about {
+        margin: 1rem;
+    }
+    
+    .product-card .price-title,
+    .trash-card .price-title {
+        font-size: 1rem;
+    }
+}
+
+/* Ховер-эффекты только для десктопов */
+@media (hover: hover) {
+    img:hover {
+        transform: scale(1.05);
+    }
+    
+    header nav a:hover {
+        color: #ccc;
+    }
+    
+    .btn:hover {
+        background: #444;
+    }
+}
+
+/* Оптимизация для landscape режима */
+@media (max-height: 500px) and (orientation: landscape) {
+    .welcome {
+        padding: 1rem;
+    }
+    
+    .product-card,
+    .trash-card {
+        padding: 0.5rem;
+    }
+}
