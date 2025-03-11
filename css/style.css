@@ -235,7 +235,7 @@ header nav a:hover {
     margin: auto;
     width: 50%;
     border-radius: 8px;
-    height: 20px;
+    height: 50px;
 }
 
 img:hover {     transform: scale(1.1); }
