@@ -234,4 +234,6 @@ header nav a:hover {
     background-color: white;
     margin: auto;
     width: 50%;
+    border-radius: 8px;
+    height: 20px;
 }
