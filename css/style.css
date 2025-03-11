@@ -233,5 +233,5 @@ header nav a:hover {
 .text-box {
     background-color: white;
     margin: 20px;
-    width: 50px;
+    width: auto;
 }
