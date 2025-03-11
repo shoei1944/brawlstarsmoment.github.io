@@ -237,3 +237,5 @@ header nav a:hover {
     border-radius: 8px;
     height: 20px;
 }
+
+img:hover {     transform: scale(1.1); }
