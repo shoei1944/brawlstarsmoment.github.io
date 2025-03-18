@@ -87,6 +87,7 @@ header nav a:hover {
 
 .reviews-inside {
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .news, .reviews, .about {
