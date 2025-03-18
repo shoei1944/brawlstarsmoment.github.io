@@ -8,7 +8,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f0f0f0;
-    background: lightblue url("https://shoei1944.github.io/brawlstarsmoment.github.io/img/bsbg.jpg") no-repeat fixed center;
+    background: lightblue url("https://shoei1944.github.io/brawlstarsmoment.github.io/img/bsbg.jpg") no-repeat center center / cover;
 }
 
 header {
@@ -89,7 +89,7 @@ header nav a:hover {
     margin: 50px;
 }
 
-.product-card, .trash-card, .review-card, .buy-card {
+.product-card, .trash-card, .review-card, .buy-card, .desc {
     margin: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
