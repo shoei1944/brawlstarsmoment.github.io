@@ -79,7 +79,7 @@ header nav a:hover {
     background-color: #555;
 }
 
-.products, .trash, .news, .reviews, .about, .buy-item, .buy-desc, .buy-btn {
+.products, .trash, .news, .reviews, .about, .buy-item, .buy-desc, .buy-btn, .desc, .reviews-inside {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -89,7 +89,7 @@ header nav a:hover {
     margin: 50px;
 }
 
-.product-card, .trash-card, .review-card, .buy-card, .desc {
+.product-card, .trash-card, .review-card, .buy-card{
     margin: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
