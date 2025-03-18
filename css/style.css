@@ -1,4 +1,4 @@
-/* style.css */
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +8,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f0f0f0;
-/*     background-image: linear-gradient(to bottom, #87CEEB, #4682B4); */
     background: lightblue url("https://shoei1944.github.io/brawlstarsmoment.github.io/img/bsbg.jpg") no-repeat fixed center;
 }
 
@@ -20,7 +19,7 @@ header {
 }
 
 header nav ul {
-    list-style: none; 
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -55,7 +54,7 @@ header nav a:hover {
 .help-tools {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
     margin: 20px 0;
 }
 
@@ -90,14 +89,6 @@ header nav a:hover {
     margin: 50px;
 }
 
-.product-card .price-title, .trash-card .price-title, .review-card, .buy-card, .about {
-    font-size: calc(123.33%);
-}
-
-.trash-card button {
-    margin: 5px;
-}
-
 .product-card, .trash-card, .review-card, .buy-card {
     margin: 10px;
     background-color: #fff;
@@ -111,28 +102,24 @@ header nav a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    /* max-height: 400px;  */
 }
 
 .product-card img, .trash-card img {
-    max-height: 150px; 
+    max-height: 150px;
 }
 
 .about {
-        margin: 10px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        box-sizing: border-box;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center; 
-        /* max-height: 400px; */
-    
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .product-card .desc {
@@ -153,7 +140,7 @@ header nav a:hover {
     margin-bottom: 10px;
 }
 
-.product-card img,.trash-card img,.review-card img, .buy-card img {
+.product-card img, .trash-card img, .review-card img, .buy-card img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
@@ -161,9 +148,7 @@ header nav a:hover {
 
 #shadowBox {
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.2);
-    /* Black w/opacity/see-through */
     border: 3px solid;
 }
 
@@ -174,8 +159,9 @@ header nav a:hover {
     font-family: monospace;
     letter-spacing: 5px;
 }
+
 .rainbow_text_animated {
-    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -184,7 +170,7 @@ header nav a:hover {
 }
 
 @keyframes rainbow_animation {
-    0%,100% {
+    0%, 100% {
         background-position: 0 0;
     }
 
@@ -201,4 +187,64 @@ header nav a:hover {
     height: 40px;
 }
 
-img:hover {     transform: scale(1.1); }
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Медиа-запросы для адаптивности */
+
+/* Для планшетов */
+@media (max-width: 768px) {
+    .product-card, .trash-card, .review-card, .buy-card {
+        width: calc(50% - 20px);
+    }
+
+    .welcome h1 {
+        font-size: 28px;
+    }
+
+    .welcome p {
+        font-size: 16px;
+    }
+
+    .rainbow {
+        font-size: 28px;
+    }
+}
+
+/* Для телефонов */
+@media (max-width: 480px) {
+    .product-card, .trash-card, .review-card, .buy-card {
+        width: calc(100% - 20px);
+    }
+
+    .welcome h1 {
+        font-size: 24px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .rainbow {
+        font-size: 24px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+
+    .text-box {
+        width: 80%;
+    }
+}
