@@ -85,6 +85,10 @@ header nav a:hover {
     justify-content: center;
 }
 
+.reviews-inside {
+    padding-top: 20px;
+}
+
 .news, .reviews, .about {
     margin: 50px;
 }
