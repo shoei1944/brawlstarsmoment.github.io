@@ -5,11 +5,19 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f0f0f0;
     background: lightblue url("https://shoei1944.github.io/brawlstarsmoment.github.io/img/bsbg.jpg") no-repeat center center / cover;
-}
+} */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh; 
+    background: lightblue url("https://shoei1944.github.io/brawlstarsmoment.github.io/img/bsbg.jpg") no-repeat center center / cover;
+    background-attachment: fixed;
+  }
 
 header {
     padding: 10px;
