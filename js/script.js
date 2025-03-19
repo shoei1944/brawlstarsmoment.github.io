@@ -111,6 +111,8 @@ if (savedTrash) {
   });
 } 
     else {
+        const trashElement = document.createElement('div');
+        trashElement.className = 'trash-empty';
         trashElement.innerHTML = `<p>Пусто</p>`;
     }
 }
@@ -161,6 +163,8 @@ function updateTrashList() {
   }
 
     else {
+        const trashElement = document.createElement('div');
+        trashElement.className = 'trash-empty';
         trashElement.innerHTML = `<p>Пусто</p>`;
     }
 
