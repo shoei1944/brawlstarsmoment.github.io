@@ -52,6 +52,10 @@ header nav a:hover {
     text-align: center;
 }
 
+.text-box p {
+    color: white;
+}
+
 .welcome h1 {
     font-size: 36px;
     margin-bottom: 10px;
