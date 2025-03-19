@@ -85,7 +85,7 @@ header nav a:hover {
     background-color: #555;
 }
 
-.products, .trash, .news, .reviews, .about, .buy-item, .buy-desc, .buy-btn, .desc, .reviews-inside {
+.products, .trash, .news, .reviews, .about, .buy-item, .buy-desc, .buy-btn, .desc, .reviews-inside, .copyright {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -222,6 +222,8 @@ img:hover {
         font-size: 28px;
     }
 }
+
+copyright
 
 /* Для телефонов */
 @media (max-width: 480px) {
