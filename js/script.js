@@ -110,6 +110,9 @@ if (savedTrash) {
     trashList.appendChild(trashElement);
   });
 } 
+    else {
+        trashElement.innerHTML = `<p>Пусто</p>`;
+    }
 }
 catch (ext){
 }
@@ -156,6 +159,10 @@ function updateTrashList() {
     });
     
   }
+
+    else {
+        trashElement.innerHTML = `<p>Пусто</p>`;
+    }
 
 const delButtons = document.querySelectorAll('.del');
 delButtons.forEach(button => {
