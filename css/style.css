@@ -50,9 +50,10 @@ header nav a:hover {
 .welcome {
     padding: 20px;
     text-align: center;
+    color: white;
 }
 
-.welcome .text-box h1 {
+.text-box h1 {
     color: white;
 }
 
@@ -207,9 +208,6 @@ header nav a:hover {
     height: 40px;
 }
 
-p {
-    color: white;
-}
 
 img:hover {
     transform: scale(1.1);
