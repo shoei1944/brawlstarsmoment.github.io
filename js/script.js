@@ -104,7 +104,7 @@ if (savedTrash) {
         <p class="price-title">${item.price} рублей</p>
         <p>${types[item.type] || 'Неизвестный тип'}</p>
         <a href="/buy/${item.id}"><button class="btn linked" data-product-id="${item.id}">Купить</button></a>
-        </br>
+        <br></br>
         <button class="btn del" data-product-id="${item.id}">Удалить</button>
     `;
     trashList.appendChild(trashElement);
@@ -149,7 +149,7 @@ function updateTrashList() {
           <p class="price-title">${item.price} рублей</p>
           <p>${types[item.type] || 'Неизвестный тип'}</p>
           <a href="/buy/${item.id}"><button class="btn linked" data-product-id="${item.id}">Купить</button></a>
-          </br>
+          <br></br>
           <button class="btn del" data-product-id="${item.id}">Удалить</button>
       `;
       trashList.appendChild(trashElement);
